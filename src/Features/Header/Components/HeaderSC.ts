@@ -4,13 +4,24 @@ import { HeaderType } from "./Header.types";
 
 export const MyHeader = styled("div")<HeaderType>((props: HeaderType) => ({
   ...types[props?.headerType!],
-  width: "100%",
+  maxWidth: "100%",
   display: "flex",
   flexDirection: "row",
-  justifyContent: "flex-start",
-  alignItems: "flex-start",
+  justifyContent:"space-between",
   padding: "15px",
   fontSize: "20px",
+  position: "sticky",
+  opacity:"0.95",
+  "&  .links": {
+    justifySelf:"flex-end",
+    display:"flex",
+  },
+  "&  h4": {
+    margin: "0",
+    paddingTop:"0",
+    paddingBottom:"0",
+    fontFamily: "'Dancing Script', cursive"
+  },
 }));
 export const HeaderLink = styled("a")<HeaderType>((props: HeaderType) => ({
   ...types[props?.headerType!],
@@ -24,10 +35,15 @@ export const HeaderLink = styled("a")<HeaderType>((props: HeaderType) => ({
   alignItems: "center",
   borderRight: "1px solid #ffffff",
   paddingRight: "15px",
+  paddingLeft: "15px",
     "&:last-child": {
         borderRight: "none",
-        paddingRight: "0px",
+        paddingLeft:"0"
     },
+    "&:first-child": {
+      paddingLeft: "0px",
+  },
+    
 }));
 
 export default MyHeader;
