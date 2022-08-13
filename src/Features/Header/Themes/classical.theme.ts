@@ -1,10 +1,12 @@
-export const types ={
+import { HeaderTypes } from "../types";
+
+export const types:HeaderTypes ={
     primaryBlue:{
         backgroundColor: '#008cff',
         color:"#ffffff"
     },
     purple:{
-        backgroundColor:"#5A18B7",
+        backgroundColor:"#5a5d6e",
         color:"#FDE112"
     },
     gradient:{

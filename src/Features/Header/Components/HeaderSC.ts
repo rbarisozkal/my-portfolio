@@ -9,9 +9,12 @@ export const MyHeader = styled("div")<HeaderType>((props: HeaderType) => ({
   flexDirection: "row",
   justifyContent:"space-between",
   padding: "15px",
+  //marginBottom: "15px",
   fontSize: "20px",
   position: "sticky",
-  opacity:"0.95",
+  //boxShadow: "1px 1px 1px 1px",
+  opacity: "0.8",
+  top: "0",
   "&  .links": {
     justifySelf:"flex-end",
     display:"flex",
@@ -22,6 +25,12 @@ export const MyHeader = styled("div")<HeaderType>((props: HeaderType) => ({
     paddingBottom:"0",
     fontFamily: "'Dancing Script', cursive"
   },
+  // change opacity when scroll height equals to 54px
+
+
+  
+  
+
 }));
 export const HeaderLink = styled("a")<HeaderType>((props: HeaderType) => ({
   ...types[props?.headerType!],

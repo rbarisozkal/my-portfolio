@@ -33,3 +33,10 @@
     transform: rotate(360deg);
   }
 }
+*{
+  -ms-overflow-style: none;
+  font-family: 'Comfortaa', cursive;
+}
+::-webkit-scrollbar {
+  display: none;
+}
