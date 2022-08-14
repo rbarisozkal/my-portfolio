@@ -1,13 +1,44 @@
 import styled from "styled-components";
 
 export const BodySC = styled.div`
-    height:auto ;
-    top: 0;
+    & i{
+        position: fixed;
+        top: 0;
+        left: 0;
+        margin-top: 5%;
+        margin-left: 5%;
+        width: 20px;
+        height: 20px;
+        border: 1px solid #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        background-color: #ffffff;
+        border-radius: 50%;
+        opacity: 0.5;
+        transition: opacity 0.3s ease-in-out;
+        
+        @media (min-width: 745px) {
+
+            display: none;
+        }
+        &:hover{
+            cursor: pointer;
+            opacity: 1;
+        }
+        &:active{
+          
+        }
+    }
+    
+
 `;
 
 export const BodyComponent = styled.div`
     display: flex;
-    padding: 20px;
+   
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -17,7 +48,6 @@ export const BodyComponent = styled.div`
     background-color: #464646;
     height:100vh;
     overflow: hidden;
-    margin-top: 0px;
 
     & .welcome-card{
       //border: 1px solid black;

@@ -7,6 +7,7 @@ import personalSummary from "../../../assets/personalSummary.png";
 const Body = () => {
   return (
     <BodySC>
+      <i id="list-icon" className="fa-solid fa-bars"></i>
       <BodyComponent
         className="welcome"
         style={{ backgroundImage: `url(${personalSummary})` }}
@@ -14,7 +15,7 @@ const Body = () => {
         <div className="welcome-card">
           <h1>WELCOME TO MY PAGE</h1>
           <p>
-            This is Renas Barış Özkal. In this page you can find personal summary, projects that I have made and contributed,
+            This is Renas Barış Özkal. In this page you can find my personal summary, projects that I have made and contributed,
             my education history and my experience.
           </p>
         </div>

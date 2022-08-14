@@ -9,12 +9,18 @@ export const MyHeader = styled("div")<HeaderType>((props: HeaderType) => ({
   flexDirection: "row",
   justifyContent:"space-between",
   padding: "15px",
+ 
+  marginBottom:"0px",
   //marginBottom: "15px",
   fontSize: "20px",
   position: "sticky",
   //boxShadow: "1px 1px 1px 1px",
   opacity: "0.8",
   top: "0",
+  zIndex: "1012987",
+  "&  #list-icon": {
+    display:"none" ,
+  },
   "&  .links": {
     justifySelf:"flex-end",
     display:"flex",
@@ -25,8 +31,27 @@ export const MyHeader = styled("div")<HeaderType>((props: HeaderType) => ({
     paddingBottom:"0",
     fontFamily: "'Dancing Script', cursive"
   },
-  // change opacity when scroll height equals to 54px
 
+  //icon appears on the left side of the header 
+  "@media (max-width: 745px)": {
+display:"none" ,
+    // display: "flex",
+    // position: "absolute",
+    // flexDirection: "column",
+    // justifyContent: "space-between",
+    // alignItems: "center",
+    // height:"100%",
+    // width:"10%",
+    // opacity: "1",
+    // "&  .links ,h4": {
+    //   display:"none" ,
+    // },
+    // "&  #list-icon": {
+    //   display:"flex" ,
+    //   color: "white",
+    // },
+    
+  }
 
   
   
