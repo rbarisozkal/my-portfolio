@@ -61,18 +61,18 @@ export const BodyComponent = styled.div`
   }
 `;
 export const SideBar = styled.div`
-  @media (min-width: 745px) {
-      display: none;
-  }
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: lightblue;
-  color: red;
-  display: block;
-  flex-direction: column;
+  
+  width: 280px;
+    min-height: 100vh;
+    box-shadow: 0px 4px 8px rgb(0 0 0 / 16%);
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    z-index: 1;
+    transition: 0.5s;
+  
+  
 `;
 
 export default BodySC;

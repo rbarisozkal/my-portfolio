@@ -34,7 +34,7 @@ export const MyHeader = styled("div")<HeaderType>((props: HeaderType) => ({
 
   //icon appears on the left side of the header 
   "@media (max-width: 745px)": {
-display:"none" ,
+    display:"none" ,
     // display: "flex",
     // position: "absolute",
     // flexDirection: "column",

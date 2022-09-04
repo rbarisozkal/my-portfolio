@@ -16,24 +16,3 @@ export const types:HeaderTypes ={
     
 
 } 
-
-// .header{
-//     display: flex;
-//     flex-direction: row;
-//     justify-content: flex-start;
-//     align-items: flex-start;
-//     width: 100%;
-//     height: auto;
-//     background-color: ;
-// }
-// a{
-//     min-width: 150px;
-//     min-height: 40px;
-//     padding: 10px 10px 10px 0 ;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     text-align: center;
-//     text-decoration: none;
-//     color: #ffffff;
-// }
