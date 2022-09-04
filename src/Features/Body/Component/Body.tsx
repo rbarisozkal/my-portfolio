@@ -23,7 +23,7 @@ const Body = () => {
         <div className="sd-header">
           <h4 className="mb-0">Sidebar Header</h4>    
         </div>
-        <Repositories/>
+        
         <div className="sd-body">
           <ul>
             <li>
@@ -57,6 +57,7 @@ const Body = () => {
             summary, projects that I have made and contributed, my education
             history and my experience.
           </p>
+          <Repositories></Repositories>
         </div>
       </BodyComponent>
       <BodyComponent style={{ backgroundImage: `url(${welcome})` }}>

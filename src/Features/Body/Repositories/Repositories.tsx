@@ -1,27 +1,39 @@
-import React, { useCallback, useEffect, useRef,useState } from "react";
+import React, { useEffect, useRef } from "react";
 import { Octokit } from "@octokit/core";
-import { MutableRefObject } from "react";
 const Repositories = () => {
-
   const octokit = new Octokit({
-    auth: "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",
+    auth: "{TOKEN HERE}",
   });
 
-  const [response,setResponse] = useState(null);
-
+  async function getRepos() {
+    const res = await octokit.request("GET /users/rbarisozkal/repos", {
+      username: "rbarisozkal",
+    });
+    return res.data;
+  }
+  const repos = getRepos().then((res) => {
+    return res;
+  });
+  const [repoList, setRepoList] = React.useState([]);
+    useEffect(() => {
+        repos.then((res) => {
+            setRepoList(res);
+        });
+    }, []);
+    console.log(repoList);
   
-  useEffect(() => {
-        
-       const getRepos = async  () => {
-        const res = await octokit.request("GET /users/rbarisozkal/repos",{username: "rbarisozkal",})
-       setResponse(res.data)
-       }
-       getRepos();
-    
-  },[]);
-  console.log(response);
   return (
-    <div></div>
-  )
+    <div>
+      <ul>
+      {repoList.map(el =>{
+        return (
+            <li key={el}>
+                {JSON.stringify(el)}
+            </li>
+        )
+      })}
+      </ul>
+    </div>
+  );
 };
-export default Repositories
+export default Repositories;
