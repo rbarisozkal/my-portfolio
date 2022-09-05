@@ -57,11 +57,12 @@ const Body = () => {
             summary, projects that I have made and contributed, my education
             history and my experience.
           </p>
-          <Repositories></Repositories>
+          
         </div>
       </BodyComponent>
       <BodyComponent style={{ backgroundImage: `url(${welcome})` }}>
       <div className="welcome-card">
+      
           <h1>Personal Summary</h1>
           <p>
             Hello again, I'm Renas Baris Ozkal. Currently 3rd year student of Computer Engineering at TED University
@@ -70,7 +71,11 @@ const Body = () => {
           </p>
         </div>
       </BodyComponent>
-      <BodyComponent style={{ backgroundImage: `url(${webdev})` }} />
+      <Repositories/>
+      <BodyComponent style={{ backgroundImage: `url(${webdev})` }} >
+      
+      </BodyComponent>
+
     </BodySC>
   );
 };
