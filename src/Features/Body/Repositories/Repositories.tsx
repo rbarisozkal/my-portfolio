@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
 import { Octokit } from "@octokit/core";
 import RepositoriesSC from "./RepositoriesSC";
-
+import pdf from '../../../../src/resume.pdf';
 import github from '../../../assets/Svg/github.svg'
 const Repositories = () => {
   const octokit = new Octokit({
-    auth: "TOKEN HERE",
+    auth: "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",
   });
 
   async function getRepos() {

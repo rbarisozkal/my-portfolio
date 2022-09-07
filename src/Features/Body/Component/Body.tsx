@@ -3,17 +3,12 @@ import { BodyComponent, BodySC } from "./BodySC";
 import { Repositories } from "../Repositories";
 import personalSummary from "../../../assets/Backgrounds/personalSummary.png";
 import webdev from "../../../assets/Backgrounds/webdev.png";
-import {saveAs} from 'file-saver';
+import pdf from '../../../../src/resume.pdf';
 import "./SideBar.css";
 
 const Body = () => {
   const [isOpen, setIsopen] = useState(false);
-  const saveFile = () => {
-    saveAs(
-      "http://localhost:3000/resume",
-      "Baris Ozkal CV.pdf"
-    );
-  };
+  
   const ToggleSidebar = () => {
     isOpen === true ? setIsopen(false) : setIsopen(true);
   };
@@ -87,7 +82,7 @@ const Body = () => {
           <br />
           <p>I took classes such as "Fundamentals of Programming with Java", "Software Engineering", "Data Structure and Algorithms I-II", "Concepts of Programming" and "C Programming" at my university.</p>
           <br />
-          <p>Currently I'm working as Software Engineering Intern at Huawei. You can download my resume by clicking <button onClick={saveFile}>download</button> </p>
+          <p>Currently I'm working as Software Engineering Intern at Huawei. You can download my resume by clicking <a download href = {pdf} target = "_blank">here</a> </p>
         </div>
       </BodyComponent>
       <Repositories />
