@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
 import { Octokit } from "@octokit/core";
 import RepositoriesSC from "./RepositoriesSC";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 import github from '../../../assets/Svg/github.svg'
 const Repositories = () => {
   const octokit = new Octokit({
-    auth: "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",
+    auth: "TOKEN HERE",
   });
 
   async function getRepos() {
