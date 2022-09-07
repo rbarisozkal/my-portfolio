@@ -3,26 +3,63 @@ export const RepositoriesSC = styled.div`
   display: flex;
   flex-direction: row;
   max-width: 100%;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
   padding: 2rem;
-  & ul {
+  & .posts-container {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    max-width: 100%;
+    min-width: 100%;
     height: auto;
     flex-wrap: wrap;
+    padding-left: 0;
     & .post {
-        background-color: #ffffff;
-        border-radius: 4px;
-        height: auto;
-        padding: 1rem;
+      background-color: #ffffff;
+      border-radius: 4px;
+      border-bottom: 1px solid grey;
+      height: auto;
+      width:100%;
+      
+      margin-bottom: 2rem;
+      padding: 1rem;
+      padding-right: 0;
+      padding-left: 0;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+      &:last-child {
+        border: none;
+      }
       & li {
         list-style: none;
         min-width: 100%;
         height: auto;
+        padding-left: 1rem;
+        & h2{
+            
+            & span{
+                & a {
+                    text-decoration: none;
+                    color: inherit;
+                    & img{
+                        width: 25px;
+                        height:25px;
+                    }
+                }
+            }
+        }
+        & h3{
+            padding-right: 1rem;
+        }
+        & .repo-name{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between; 
+            width: 100%;
+            & span{
+                padding-right: 2rem;
+            }
+        }
       }
     }
   }

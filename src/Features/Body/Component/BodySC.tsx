@@ -39,7 +39,7 @@ export const BodyComponent = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  background-color: #464646;
+  background-color: #F4F5F7;
   height: 100vh;
   overflow: hidden;
 

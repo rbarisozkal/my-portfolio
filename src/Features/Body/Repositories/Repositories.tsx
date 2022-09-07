@@ -1,9 +1,11 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect } from "react";
 import { Octokit } from "@octokit/core";
 import RepositoriesSC from "./RepositoriesSC";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import github from '../../../assets/Svg/github.svg'
 const Repositories = () => {
   const octokit = new Octokit({
-    auth: "{TOKEN HERE}",
+    auth: "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",
   });
 
   async function getRepos() {
@@ -22,15 +24,19 @@ const Repositories = () => {
     });
   }, []);
   let elem: Array<any> = [];
+  console.log(repoList);
   repoList.map((e) => {
     elem.push(e);
   });
   let listElements = elem.map((e) => {
     return (
       <div className="post">
-        <li>
-          <h3>{e.name}</h3>
-          <h5>{e.description}</h5>
+        <li key={e.id}>
+          <h2 className="repo-name">
+            <span>{e.name}</span> <span><a target="_blank" href={e.html_url}> <img src={github} alt="" /> </a></span> 
+          </h2>
+          <h3>{e.description}</h3>
+          <p>Mostly used language by percentage: {e.language}</p>
         </li>
       </div>
     );
