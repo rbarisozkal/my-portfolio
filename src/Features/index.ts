@@ -1,3 +1,2 @@
-export * as Body from '../Features/Body'
-export * as Header from '../Features/Header'
-
+export * as Body from '../Features/Body';
+export * as Header from '../Features/Header';
