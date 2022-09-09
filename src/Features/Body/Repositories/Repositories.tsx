@@ -5,7 +5,7 @@ import pdf from '../../../../src/resume.pdf';
 import github from '../../../assets/Svg/github.svg';
 const Repositories = () => {
   const octokit = new Octokit({
-    auth: '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'
+    auth: 'TOKEN HERE'
   });
 
   async function getRepos() {
@@ -32,6 +32,7 @@ const Repositories = () => {
     return (
       <div className="post">
         <li key={e.id}>
+          <section key={e.id}>
           <h2 className="repo-name">
             <span>{e.name}</span>{' '}
             <span>
@@ -43,6 +44,7 @@ const Repositories = () => {
           </h2>
           <h3>{e.description}</h3>
           <p>Mostly used language by percentage: {e.language}</p>
+          </section>
         </li>
       </div>
     );
