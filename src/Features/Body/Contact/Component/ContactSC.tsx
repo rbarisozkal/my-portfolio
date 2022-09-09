@@ -15,31 +15,53 @@ export const ContactSC = styled.div`
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 20rem;
+    height: 40rem;
     justify-content: space-evenly;
     align-items: flex-start;
+    & .error-text{
+      display: block;
+      color: red;
+      width: 100%;
+      height: auto;
+    }
+    & p{
+      font-size: 1.4rem;
+    }
+    & .valid-text{
+      display: none;
+    }
     & input {
       width: 100%;
-      height: 2rem;
+      height: 6rem;
+      font-size: 1.6rem;
       margin: 0.5rem 0 0.5rem 0;
       padding: 0;
       line-height: 95%;
       border: 1px solid lightgrey;
+      &:focus{
+        outline: none;
+      }
     }
     & textarea {
       resize: none;
       border: 1px solid lightgrey;
       width: 100%;
-      height: 8rem;
+      height: 10rem;
+      margin: 0.5rem 0 0.5rem 0;
+      font-size: 1.6rem;
       outline: none;
-      padding: 0;
+      padding-bottom: 2rem;
+      padding-top: 1rem;
     }
-    & input[type='submit'] {
+    & button {
       width: 20%;
+      background-color: gray;
+      color: #ffffff;
       align-self: flex-end;
-
+      height: 5rem;
+      font-size: 1.4rem;
       border: 1px solid transparent;
-      border-radius: 4px;
+      border-radius: 25px;
       margin-right: -2px;
     }
   }

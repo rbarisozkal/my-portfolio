@@ -5,7 +5,7 @@ import pdf from '../../../../src/resume.pdf';
 import github from '../../../assets/Svg/github.svg';
 const Repositories = () => {
   const octokit = new Octokit({
-    auth: 'TOKEN HERE'
+    auth: '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'
   });
 
   async function getRepos() {
