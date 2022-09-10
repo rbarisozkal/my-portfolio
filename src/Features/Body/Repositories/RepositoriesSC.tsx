@@ -5,7 +5,7 @@ export const RepositoriesSC = styled.div`
   max-width: 100%;
   justify-content: flex-start;
   align-items: flex-start;
-  padding: 2rem;
+  padding: 4rem;
   & .posts-container {
     display: flex;
     flex-direction: column;

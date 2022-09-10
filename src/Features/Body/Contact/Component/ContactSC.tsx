@@ -6,7 +6,7 @@ export const ContactSC = styled.div`
   padding: 2rem;
   justify-content: center;
   align-items: center;
-  width: 85%;
+
   background: #ffffff;
   border: none;
   border-radius: 25px;
@@ -25,18 +25,18 @@ export const ContactSC = styled.div`
       height: auto;
     }
     & p{
-      font-size: 1.4rem;
+      font-size: 1rem;
     }
     & .valid-text{
       display: none;
     }
     & input {
       width: 100%;
-      height: 6rem;
-      font-size: 1.6rem;
+      height: 3rem;
+      font-size: 1.2rem;
       margin: 0.5rem 0 0.5rem 0;
       padding: 0;
-      line-height: 95%;
+      
       border: 1px solid lightgrey;
       &:focus{
         outline: none;
@@ -48,21 +48,22 @@ export const ContactSC = styled.div`
       width: 100%;
       height: 10rem;
       margin: 0.5rem 0 0.5rem 0;
-      font-size: 1.6rem;
+      font-size: 1.2rem;
       outline: none;
-      padding-bottom: 2rem;
+      padding-bottom: 1rem;
       padding-top: 1rem;
     }
     & button {
-      width: 20%;
+      width: 18%;
       background-color: gray;
       color: #ffffff;
       align-self: flex-end;
-      height: 5rem;
-      font-size: 1.4rem;
+      height: 3rem;
+      font-size: 1.1rem;
       border: 1px solid transparent;
       border-radius: 25px;
       margin-right: -2px;
+      cursor: pointer;
     }
   }
 `;

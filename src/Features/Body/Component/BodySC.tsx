@@ -40,14 +40,123 @@ export const BodyComponent = styled.div`
   background-size: cover;
   background-position: center center;
   background-color: #F4F5F7;
-  height: 100vh;
+
   overflow: hidden;
+   padding: 4rem;
+   & .contact{
+    height: 80%;
+    width: 100%;
+    & h1 {
+      font-size: 2.875rem;
+      color: #073bac;
+      background-color: #ffffff;
+      border-radius: 25px;
+      width: fit-content;
+      font-family: "Catamaran", sans-serif;
+    }
+   }
+   & .career-summary{
+    height: 80%;
+    width: 100%;
+    
+    & p{
+      font-size: 1.25rem;
+      font-family: "Comfortaa", cursive;
+      line-height: 200%;
+       & a{
+        color: inherit;
+        font-style: italic;
+       }
+    }
+    & h1 {
+      font-size: 2.875rem;
+      color: #073bac;
+      font-family: "Catamaran", sans-serif;
+    }
+    & .card{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      width: 100%;
+      height:auto;
+    @media (max-width:1380px){
+      flex-wrap: wrap;
+    }
+
+      & .card-image{
+        width: 15rem;
+        height: auto;
+       
+        & img{
+          width: 15rem;
+          height: auto;
+          padding:1rem;
+        }
+      }
+      & p {
+      font-size: 1.25rem;
+      font-family: "Comfortaa", cursive;
+      line-height: 200%;
+
+    
+      & a{
+        color: inherit;
+        font-style: italic;
+      }
+    }
+    }
+   }
+  & .personal-summary{
+    height: 80%;
+    width: 100%;
+    
+    & h1 {
+      font-size: 2.875rem;
+      color: #073bac;
+      font-family: "Catamaran", sans-serif;
+    }
+    & .card{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      width: 100%;
+      height:auto;
+    @media (max-width:746px){
+      flex-wrap: wrap;
+    }
+
+      & .card-image{
+        width: 15rem;
+        height: auto;
+       
+        & img{
+          width: 15rem;
+          height: auto;
+          padding:1rem;
+        }
+      }
+      & p {
+      font-size: 1.25rem;
+      font-family: "Comfortaa", cursive;
+      line-height: 200%;
+
+    
+      & a{
+        color: inherit;
+        font-style: italic;
+      }
+    }
+    }
+    
+  }
 
   & .welcome-card {
     //border: 1px solid black;
-    height: 65%;
-    width: 50%;
-    margin-left: 10%;
+    height: 100vh;
+    width: 70%;
+   
     & h1 {
       font-size: 46px;
       color: #073bac;
@@ -57,6 +166,9 @@ export const BodyComponent = styled.div`
       font-size: 20px;
       font-family: "Comfortaa", cursive;
       line-height: 200%;
+      & a{
+        color: inherit;
+      }
     }
   }
 `;
