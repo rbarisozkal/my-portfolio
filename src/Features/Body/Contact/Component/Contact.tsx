@@ -47,6 +47,7 @@ const Contact = () => {
     }
   };
   return (
+    
     <ContactSC>
       <form ref={form}>
         <input type="text" name="name" id="name" placeholder="Name" />
@@ -64,6 +65,25 @@ const Contact = () => {
         <button type="submit" value="Send Message" className="primary-button">
           <span onClick={sendEmail}>Send Message</span>
         </button>
+        {/* <div
+          style={{
+            pointerEvents: "none",
+            width: "100%",
+            height: "0",
+            paddingBottom: "49%",
+            position: "relative",
+          }}
+        >
+          <iframe
+            src="https://giphy.com/embed/n8bAozpJjeiMU"
+            width="100%"
+            height="100%"
+            style={{ position: "absolute" }}
+            frameBorder="0"
+            className="giphy-embed"
+            allowFullScreen
+          ></iframe>
+        </div> */}
       </form>
     </ContactSC>
   );

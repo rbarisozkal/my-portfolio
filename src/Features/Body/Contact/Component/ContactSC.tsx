@@ -10,12 +10,15 @@ export const ContactSC = styled.div`
   background: #ffffff;
   border: none;
   border-radius: 25px;
-
+  @media (max-width: 460px) {
+    padding: 2rem;
+  }
+  
   & form {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 40rem;
+    height: auto;
     justify-content: space-evenly;
     align-items: flex-start;
     & .error-text{
@@ -36,7 +39,9 @@ export const ContactSC = styled.div`
       font-size: 1.2rem;
       margin: 0.5rem 0 0.5rem 0;
       padding: 0;
-      
+      @media (max-width:720px){
+        font-size: 1rem;
+      }
       border: 1px solid lightgrey;
       &:focus{
         outline: none;
@@ -52,9 +57,12 @@ export const ContactSC = styled.div`
       outline: none;
       padding-bottom: 1rem;
       padding-top: 1rem;
+      @media (max-width:720px){
+        font-size: 1rem;
+      }
     }
     & button {
-      width: 18%;
+      width: auto;
       background-color: gray;
       color: #ffffff;
       align-self: flex-end;
@@ -63,6 +71,9 @@ export const ContactSC = styled.div`
       border: 1px solid transparent;
       border-radius: 25px;
       margin-right: -2px;
+      @media (max-width:720px){
+        font-size: 1rem;
+      }
       cursor: pointer;
     }
   }

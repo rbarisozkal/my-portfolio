@@ -39,155 +39,149 @@ export const BodyComponent = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  background-color: #F4F5F7;
+  background-color: #f4f5f7;
 
   overflow: hidden;
-   padding: 4rem;
-   & .contact{
+  padding: 4rem;
+  @media (max-width: 460px) {
+    padding: 2rem;
+  }
+  & .contact {
     height: 80%;
     width: 100%;
+    padding: 4rem;
     & h1 {
       font-size: 2.875rem;
-      color: #073bac;
-      background-color: #ffffff;
+      color: #ffffff;
+
       border-radius: 25px;
       width: fit-content;
       font-family: "Catamaran", sans-serif;
     }
-   }
-   & .career-summary{
+  }
+  & .career-summary {
     height: 80%;
     width: 100%;
-    
-    & p{
+
+    & p {
       font-size: 1.25rem;
       font-family: "Comfortaa", cursive;
       line-height: 200%;
-       & a{
+      & a {
         color: inherit;
         font-style: italic;
-       }
+      }
     }
     & h1 {
       font-size: 2.875rem;
       color: #073bac;
       font-family: "Catamaran", sans-serif;
     }
-    & .card{
+    & .card {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
       align-items: flex-start;
       width: 100%;
-      height:auto;
-    @media (max-width:1380px){
-      flex-wrap: wrap;
-    }
+      height: auto;
+      @media (max-width: 1380px) {
+        flex-wrap: wrap;
+      }
 
-      & .card-image{
-        width: 15rem;
+      & .card-image {
+        display: flex;
+        flex-direction: column;
+        width: auto;
         height: auto;
-       
-        & img{
+
+        & img {
           width: 30rem;
           height: auto;
-          padding:1rem;
-          @media (max-width:640px){
+          padding: 1rem;
+          @media (max-width: 640px) {
             width: 20rem;
           }
         }
       }
       & p {
-      font-size: 1.25rem;
-      font-family: "Comfortaa", cursive;
-      line-height: 200%;
+        font-size: 1.25rem;
+        font-family: "Comfortaa", cursive;
+        line-height: 200%;
 
-    
-      & a{
-        color: inherit;
-        font-style: italic;
+        & a {
+          color: inherit;
+          font-style: italic;
+        }
       }
     }
-    }
-   }
-  & .personal-summary{
+  }
+  & .personal-summary {
     height: 80%;
     width: 100%;
-    
+
     & h1 {
       font-size: 2.875rem;
       color: #073bac;
       font-family: "Catamaran", sans-serif;
     }
-    & .card{
+    & .card {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
       align-items: flex-start;
       width: 100%;
-      height:auto;
-    @media (max-width:746px){
-      flex-wrap: wrap;
-    }
+      height: auto;
+      @media (max-width: 746px) {
+        flex-wrap: wrap;
+      }
 
-      & .card-image{
+      & .card-image {
+        width: auto;
+        height: auto;
+      }
+
+      & img {
         width: 15rem;
         height: auto;
-       
-        & img{
-          width: 15rem;
-          height: auto;
-          padding:1rem;
-        }
+        padding: 1rem;
       }
-      & p {
+    }
+    & p {
       font-size: 1.25rem;
       font-family: "Comfortaa", cursive;
       line-height: 200%;
 
-    
-      & a{
+      & a {
         color: inherit;
         font-style: italic;
       }
     }
-    }
-    
   }
 
   & .welcome-card {
     //border: 1px solid black;
     height: 100vh;
     width: 70%;
-   
+    display: flex;
+    flex-direction: column;
     & h1 {
-      font-size: 46px;
+      font-size: 2.875rem;
       color: #073bac;
       font-family: "Catamaran", sans-serif;
     }
     & p {
-      font-size: 20px;
+      font-size: 1.25rem;
       font-family: "Comfortaa", cursive;
       line-height: 200%;
-      & a{
+      & a {
         color: inherit;
       }
     }
+    & .gif {
+      align-self: center;
+      max-width: 32rem;
+    }
   }
-`;
-export const SideBar = styled.div`
-  
-  width: 280px;
-    min-height: 100vh;
-    box-shadow: 0px 4px 8px rgb(0 0 0 / 16%);
-    background-color: #fff;
-    position: fixed;
-    top: 0;
-    left: -100%;
-    z-index: 1;
-    transition: 0.5s;
-  
-  
 `;
 
 export default BodySC;

@@ -18,6 +18,11 @@ export const RepositoriesSC = styled.div`
     height: auto;
     flex-wrap: wrap;
     padding-left: 0;
+    h1{
+      font-size: 2.875rem;
+    color: #073bac;
+    font-family: "Catamaran",sans-serif;
+    }
     & .post {
       background-color: #ffffff;
       border-radius: 4px;

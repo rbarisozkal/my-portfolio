@@ -4,7 +4,7 @@ import RepositoriesSC from './RepositoriesSC';
 import github from '../../../assets/Svg/github.svg';
 const Repositories = () => {
   const octokit = new Octokit({
-    auth: 'TOKEN HERE'
+    auth: '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'
   });
 
   async function getRepos() {
@@ -30,6 +30,7 @@ const Repositories = () => {
   let listElements = elem.map(e => {
     return (
       <div className="post">
+        
         <li key={e.id}>
           <section key={e.id}>
           <h2 className="repo-name">
@@ -52,7 +53,10 @@ const Repositories = () => {
 
   return (
     <RepositoriesSC>
-      <ul className="posts-container">{listElements}</ul>
+      
+      <ul className="posts-container">
+      <h1>Repos</h1>
+        {listElements}</ul>
     </RepositoriesSC>
   );
 };

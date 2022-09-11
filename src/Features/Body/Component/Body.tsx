@@ -4,9 +4,10 @@ import { Repositories } from "../Repositories";
 import personalSummary from "../../../assets/Backgrounds/personalSummary.png";
 import me from "../../../assets/portfolio-photos/me.jpeg";
 import github from "../../../assets/portfolio-photos/github.jpg";
-import webdev from "../../../assets/Backgrounds/webdev.png";
+import purpleBackground from "../../../assets/Backgrounds/purpleBackground.png";
 import pdf from "../../../../src/resume.pdf";
 import { Contact } from "../Contact";
+import office from "../../../assets/office.gif";
 import "./SideBar.css";
 
 const Body = () => {
@@ -67,8 +68,29 @@ const Body = () => {
           </p>
           <br />
           <br />
+          <div
+            className="gif"
+            style={{
+              pointerEvents: "none",
+              width: "100%",
+              height: "0",
+              paddingBottom: "49%",
+              position: "relative",
+            }}
+          >
+            <iframe
+              src="https://giphy.com/embed/AYECTMLNS4o67dCoeY"
+              width="100%"
+              height="100%"
+              style={{ position: "absolute" }}
+              frameBorder="0"
+              className="giphy-embed"
+              allowFullScreen
+            ></iframe>
+          </div>
           <p>
-            You can find my contact information at the very bottom of the page.
+            You can find my contact information and detailed summary at the very
+            bottom of the page.
           </p>
         </div>
       </BodyComponent>
@@ -128,14 +150,23 @@ const Body = () => {
               </a>{" "}
               On the other hand, second part held face-to-face at lab class at
               university.
+              <br />
+              <br />
+              For a couple of weeks I have been learning DevOps and Cloud. As
+              for long term I am planning be a DevOps-Cloud Developer and want
+              to work in big tech Companies such as Meta, Facebook and Amazon.
             </p>
+
             <div className="card-image">
               <img src={github} alt="" />
+
+              <img src={office} alt=""></img>
             </div>
           </div>
 
           <br />
           <br />
+
           <p>
             Currently I'm working as Software Engineering Intern at Huawei. You
             can download my resume by clicking{" "}
@@ -146,7 +177,7 @@ const Body = () => {
         </div>
       </BodyComponent>
       <Repositories />
-      <BodyComponent style={{ backgroundImage: `url(${webdev})` }}>
+      <BodyComponent style={{ backgroundImage: `url(${purpleBackground})` }}>
         <div className="contact">
           <h1>Contact</h1>
           <Contact />
