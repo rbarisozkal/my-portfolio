@@ -9,7 +9,7 @@ import pdf from "../../../../src/resume.pdf";
 import { Contact } from "../Contact";
 import office from "../../../assets/office.gif";
 import "./SideBar.css";
-
+import {Link} from 'react-scroll'
 const Body = () => {
   const [isOpen, setIsopen] = useState(false);
 
@@ -25,23 +25,22 @@ const Body = () => {
       ></i>
       <div className={`sidebar ${isOpen === true ? "active" : ""}`}>
         <div className="sd-header">
-          <h4 className="mb-0">Sidebar Header</h4>
+          <h4 className="mb-0">My Portfolio</h4>
         </div>
-
         <div className="sd-body">
           <ul>
-            <li>
-              <a className="sd-link">Welcome to My Page</a>
-            </li>
-            <li>
-              <a className="sd-link">About Me</a>
-            </li>
-            <li>
-              <a className="sd-link">My Projects</a>
-            </li>
-            <li>
-              <a className="sd-link">Contact</a>
-            </li>
+          <Link className='link' activeClass="active" smooth spy to="welcome" >
+            Welcome to My Page
+          </Link>
+          <Link className='link' activeClass="active" smooth spy to="about" >
+            About Me
+          </Link>
+          <Link className='link' activeClass="active" smooth spy to="repos">
+            My Projects
+          </Link>
+          <Link className='link' activeClass="active" smooth spy to="contact" >
+            Contact
+          </Link>
           </ul>
         </div>
       </div>
@@ -51,6 +50,7 @@ const Body = () => {
       ></div>
 
       <BodyComponent
+      id="welcome"
         className="welcome"
         style={{ backgroundImage: `url(${personalSummary})` }}
       >
@@ -94,7 +94,7 @@ const Body = () => {
           </p>
         </div>
       </BodyComponent>
-      <BodyComponent>
+      <BodyComponent id="about">
         <div className="personal-summary">
           <h1>Personal Summary</h1>
           <div className="card">
@@ -177,7 +177,7 @@ const Body = () => {
         </div>
       </BodyComponent>
       <Repositories />
-      <BodyComponent style={{ backgroundImage: `url(${purpleBackground})` }}>
+      <BodyComponent id='contact' style={{ backgroundImage: `url(${purpleBackground})` }}>
         <div className="contact">
           <h1>Contact</h1>
           <Contact />
