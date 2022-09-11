@@ -89,9 +89,12 @@ export const BodyComponent = styled.div`
         height: auto;
        
         & img{
-          width: 15rem;
+          width: 30rem;
           height: auto;
           padding:1rem;
+          @media (max-width:640px){
+            width: 20rem;
+          }
         }
       }
       & p {

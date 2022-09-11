@@ -129,8 +129,8 @@ const Body = () => {
               On the other hand, second part held face-to-face at lab class at
               university.
             </p>
-            <div style={{ width: "50rem" }} className="card-image">
-              <img src={github} style={{ width: "30rem" }} alt="" />
+            <div className="card-image">
+              <img src={github} alt="" />
             </div>
           </div>
 
