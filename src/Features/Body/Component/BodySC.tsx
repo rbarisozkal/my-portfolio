@@ -46,6 +46,11 @@ export const BodyComponent = styled.div`
   @media (max-width: 460px) {
     padding: 2rem;
   }
+  & .welcome{
+    @media (max-width:765px){
+      padding: 2rem;
+    }
+  }
   & .contact {
     height: 80%;
     width: 100%;
@@ -162,6 +167,9 @@ export const BodyComponent = styled.div`
     //border: 1px solid black;
     height: 100vh;
     width: 70%;
+    @media (max-width: 746px) {
+      width: 100%;
+      }
     display: flex;
     flex-direction: column;
     & h1 {
