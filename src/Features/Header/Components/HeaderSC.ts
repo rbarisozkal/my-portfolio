@@ -45,6 +45,7 @@ export const MyHeader = styled("ul")<HeaderType>((props: HeaderType)=> ({
     borderRight: "1px solid #ffffff",
     paddingRight: "15px",
     paddingLeft: "15px",
+    cursor: "pointer",
     "&:last-child": {
       borderRight: "none",
       paddingLeft: "0",

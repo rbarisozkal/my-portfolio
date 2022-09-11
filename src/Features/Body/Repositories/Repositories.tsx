@@ -4,7 +4,7 @@ import RepositoriesSC from './RepositoriesSC';
 import github from '../../../assets/Svg/github.svg';
 const Repositories = () => {
   const octokit = new Octokit({
-    auth: 'TOKEN HERE'
+    auth: process.env.API_KEY
   });
 
   async function getRepos() {
