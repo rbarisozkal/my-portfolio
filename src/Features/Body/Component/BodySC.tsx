@@ -172,6 +172,9 @@ export const BodyComponent = styled.div`
       width: 100%;
       height: auto;
       }
+      @media (min-width: 1135px) {
+      height: auto;
+      }
     display: flex;
     flex-direction: column;
     & h1 {
@@ -190,6 +193,9 @@ export const BodyComponent = styled.div`
     & .gif {
       align-self: center;
       max-width: 32rem;
+      @media (min-width: 1135px) {
+      padding-bottom:0;
+      }
     }
   }
 `;

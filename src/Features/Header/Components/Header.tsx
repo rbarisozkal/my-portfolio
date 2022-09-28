@@ -18,7 +18,7 @@ const Header: FC<HeaderType> = ({ headerType }) => {
           <Link className='link' activeClass="active" smooth spy to="repos">
             My Projects
           </Link>
-          <Link className='link' activeClass="active" smooth spy to="about" >
+          <Link className='link' activeClass="active" smooth spy to="contact" >
             Contact
           </Link>
         </div>

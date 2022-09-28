@@ -168,7 +168,7 @@ const Body = () => {
           <br />
 
           <p>
-            Currently I'm working as Software Engineering Intern at Huawei. You
+            Currently I'm working as Assistant Cloud Engineer at Huawei. You
             can download my resume by clicking{" "}
             <a download href={pdf} target="_blank">
               here
