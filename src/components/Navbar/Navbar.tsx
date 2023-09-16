@@ -4,9 +4,31 @@ import "./index.css";
 import avatar from "../../assets/avatar.png";
 import { useMediaQuery } from "../../utils/mediaQuery";
 import { motion } from "framer-motion";
+const navMotion = {
+  visible: {
+    opacity: 1,
+    transition: {
+      when: "beforeChildren",
+      staggerChildren: 0.15,
+    },
+  },
+  hidden: {
+    opacity: 0,
+  },
+};
+const itemMotion = {
+  visible: {
+    opacity: 1,
+    x: 0,
+  },
+  hidden: {
+    opacity: 0,
+    x: -100,
+  },
+};
+
 function Navbar() {
   const matches = useMediaQuery("(min-width: 720px)");
-  console.log(matches);
   const [toggled, setToggled] = useState(false);
   return (
     <nav className="relative px-12 py-2 flex items-center text-center justify-between font-medium">
@@ -35,13 +57,13 @@ function Navbar() {
             <a href="/">Home</a>
           </h1>
           <h1 className="text-md font-bold">
-            <a href="/">About</a>
+            <a href="/about">About</a>
           </h1>
           <h1 className="text-md font-bold">
-            <a href="/">My Projects</a>
+            <a href="/projects">My Projects</a>
           </h1>
           <h1 className="text-md font-bold">
-            <a href="/">Contact</a>
+            <a href="/contact">Contact</a>
           </h1>
         </>
       )}
@@ -71,15 +93,24 @@ function Navbar() {
       )}
       {toggled && !matches && (
         <motion.div
-          animate={{ opacity: 1, x: 0 }}
-          initial={{ opacity: 0, x: 25 }}
-          className="fixed flex items-center justify-center bg-white bottom-0 left-0 w-full h-screen"
+          variants={navMotion}
+          animate="visible"
+          initial="hidden"
+          className="fixed flex items-center justify-center bg-white bottom-0 left-0 w-full h-screen z-40"
         >
           <div className="flex flex-col gap-24 text-xl">
-            <a href="">Home</a>
-            <a href="/about">About Me</a>
-            <a href="/projects">My Projects</a>
-            <a href="/contact">Contact</a>
+            <motion.a variants={itemMotion} href="">
+              Home
+            </motion.a>
+            <motion.a variants={itemMotion} href="/about">
+              About Me
+            </motion.a>
+            <motion.a variants={itemMotion} href="/projects">
+              My Projects
+            </motion.a>
+            <motion.a variants={itemMotion} href="/contact">
+              Contact
+            </motion.a>
           </div>
         </motion.div>
       )}
