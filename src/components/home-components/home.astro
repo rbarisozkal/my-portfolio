@@ -1,17 +1,20 @@
 ---
 import img from "../../assets/background.png";
+import avatar from "../../assets/avatar.png";
 ---
 
 <div
-  class="welcomeContainer relative isolate overflow-hidden sm:py-8 md:py-24 lg:pb-72 lg:pt-40 bg-gray-900"
+  class="relative flex flex-col justify-center items-center overflow-hidden h-screen bg-gray-900 py-8 md:py-24 lg:py-72 lg:pt-40"
 >
   <img
     src={img.src}
     alt=""
     class="absolute inset-0 -z-10 h-full w-full object-cover object-right md:object-center"
   />
+
+  <!-- Gradient Overlay on Small Screens -->
   <div
-    class="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl"
+    class="hidden sm:block sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:transform-gpu sm:blur-3xl"
     aria-hidden="true"
   >
     <div
@@ -20,8 +23,10 @@ import img from "../../assets/background.png";
     >
     </div>
   </div>
+
+  <!-- Gradient Overlay on Large Screens -->
   <div
-    class="absolute -top-52 left-1/2 -z-10 -translate-x-1/2 transform-gpu blur-3xl sm:top-[-28rem] sm:ml-16 sm:translate-x-0 sm:transform-gpu"
+    class="absolute -top-52 left-1/2 -z-10 -translate-x-1/2 transform-gpu blur-3xl sm:hidden"
     aria-hidden="true"
   >
     <div
@@ -30,17 +35,59 @@ import img from "../../assets/background.png";
     >
     </div>
   </div>
-  <div class="mx-auto s:h-96 max-w-7xl px-6 sm:pb-12 lg:px-8">
+
+  <div class="mx-auto max-w-7xl px-6 sm:pb-12 lg:px-8">
     <div class="mx-auto max-w-2xl lg:mx-0">
       <h2 class="text-4xl font-bold tracking-tight text-white sm:text-6xl">
         Welcome to My Portfolio
       </h2>
       <p class="mt-6 text-lg leading-8 text-white">
         I'm Renas Baris Ozkal. I'm a software developer. This is the page where
-        you can find my projects, career and blog posts. Also you can find my
+        you can find my projects, career, and blog posts. Also, you can find my
         contact information whenever you want to work with me.
       </p>
     </div>
   </div>
 </div>
+
+<div class="flex justify-center">
+  <div class="w-full flex flex-wrap items-center">
+    <!-- Image Area (on the right) -->
+    <div class="w-full md:w-1/2 s:w-1/4">
+      <img src={avatar.src} alt="Your Photo" class="w-full" />
+    </div>
+
+    <!-- Text Area (on the left) -->
+    <div class="w-full p-4 md:w-1/2">
+      <section class="mb-32 p-12 pb-0 text-center">
+        <h2
+          class="mb-12 text-5xl font-bold tracking-tight md:text-6xl xl:text-7xl"
+        >
+          <br />
+          <span class="text-primary dark:text-primary-400"
+            >What You'll Find Here</span
+          >
+        </h2>
+        <p class="text-lg text-neutral-500 dark:text-neutral-300">
+          In this portfolio, you'll discover my journey through the world of
+          technology, from my educational background and professional
+          experiences to the projects I've undertaken and the skills I've
+          acquired along the way.
+        </p>
+        <br />
+        <br /><br /><br />
+        <p class="text-lg text-neutral-500 dark:text-neutral-300">
+          But that's not all! Beyond the tech and code, you'll also glimpse into
+          my passions, interests, and the creative spirit that drives me. From
+          coding challenges to innovative projects, this portfolio is a window
+          into the multifaceted world of technology through my eyes.
+        </p>
+      </section>
+    </div>
+  </div>
+</div>
+
+<!-- Section: Design Block -->
+
+<!-- Container for demo purpose -->
 <style></style>
