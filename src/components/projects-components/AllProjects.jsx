@@ -10,9 +10,7 @@ import java from "../../assets/java.svg";
 import python from "../../assets/python.svg";
 import React from "react";
 import axios from "axios";
-const octokit = new Octokit({
-  auth: "",
-});
+
 function AllProjects() {
   const [projects, setProjects] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -26,14 +24,13 @@ function AllProjects() {
     Java: java.src,
     Python: python.src,
   };
-  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;
+
   useEffect(async () => {
-    console.log(process.env);
-    await octokit
-      .request("GET /users/rbarisozkal/repos", {
-        username: "rbarisozkal",
-        headers: {},
-      })
+    // console.log(`${process.env.REACT_APP_API_KEY}`);
+    await axios
+      .get(
+        "https://api.github.com/users/rbarisozkal/repos?username=rbarisozkal"
+      )
       .then((response) => {
         //sort data by date
         response.data.sort(function (a, b) {
