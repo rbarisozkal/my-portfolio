@@ -57,7 +57,7 @@ function Navbar() {
             <a href="/">Home</a>
           </h1>
           <h1 className="text-md font-bold">
-            <a href="/about">About</a>
+            <a href="/about">About Me</a>
           </h1>
           <h1 className="text-md font-bold">
             <a href="/projects">My Projects</a>
