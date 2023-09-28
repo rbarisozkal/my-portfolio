@@ -1,6 +1,12 @@
 ---
 import MainLayout from "../layouts/main-layout.astro";
 import Timeline from "../components/about-components/timeline.astro";
+import Carousel from "../components/about-components/carousel.astro";
 ---
 
-<MainLayout title="About Me"><Timeline /></MainLayout>
+<MainLayout title="About Me">
+  <>
+    <Carousel />
+    <Timeline />
+  </>
+</MainLayout>

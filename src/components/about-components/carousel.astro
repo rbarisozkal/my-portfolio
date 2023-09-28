@@ -1,0 +1,168 @@
+---
+import cappadocia from "../../assets/cappadocia.png";
+import concert from "../../assets/concert.png";
+import gitTraining from "../../assets/gitTraining.png";
+import seniorProject from "../../assets/seniorProject.png";
+---
+
+<div class="py">
+  <div id="indicators-carousel" class="relative w-full" data-carousel="static">
+    <!-- Carousel wrapper -->
+    <div
+      class="relative lg:h-[50rem] md:h-[30rem] sm:h-[20rem] min-[320px]:h-[30rem] overflow-hidden"
+    >
+      <!-- Item 1 -->
+      <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
+        <img
+          src={cappadocia.src}
+          class="object-cover w-full h-full"
+          alt="..."
+        />
+        <div
+          class="absolute inset-0 flex justify-center items-end text-center p-12 text-white font bg-black/30"
+        >
+          This is me, in Cappadocia, Turkey. I was there for a week with my
+          friends. It was a great experience. Basically I love travelling and I
+          want to travel all around the world.
+        </div>
+      </div>
+      <!-- Item 2 -->
+      <div class="hidden duration-700 ease-in-out" data-carousel-item>
+        <img
+          src={gitTraining.src}
+          class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+          alt="..."
+        /><div
+          class="absolute inset-0 flex justify-center items-end text-center p-12 text-white font bg-black/50"
+        >
+          It is a picture from a training that I gave about Git. I love to share
+          my knowledge with people. I believe that sharing is the best way to
+          learn.
+        </div>
+      </div>
+      <!-- Item 3 -->
+      <div class="hidden duration-700 ease-in-out" data-carousel-item>
+        <img
+          src={seniorProject.src}
+          class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+          alt="..."
+        /><div
+          class="absolute inset-0 flex justify-center items-end text-center p-12 text-white font bg-black/50"
+        >
+          We had senior project in our university. We developed a web
+          application with my loving team. Best team ever!
+        </div>
+      </div>
+      <!-- Item 5 -->
+      <div class="hidden duration-700 ease-in-out" data-carousel-item>
+        <img
+          src={concert.src}
+          class="absolute block w-11/12 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+          alt="..."
+        />
+        <div
+          class="absolute inset-0 flex justify-center items-end text-center p-12 text-white font bg-black/10"
+        >
+          I love going to concerts. This is a picture from Can Bonomo's concert
+          with my girlfriend. Generally I would prefer to go to rock concerts
+          but I love Can Bonomo's music.
+        </div>
+      </div>
+    </div>
+    <!-- Slider indicators -->
+    <div
+      class="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2"
+    >
+      <button
+        type="button"
+        class="w-3 h-3 rounded-full"
+        aria-current="true"
+        aria-label="Slide 1"
+        data-carousel-slide-to="0"></button>
+      <button
+        type="button"
+        class="w-3 h-3 rounded-full"
+        aria-current="false"
+        aria-label="Slide 2"
+        data-carousel-slide-to="1"></button>
+      <button
+        type="button"
+        class="w-3 h-3 rounded-full"
+        aria-current="false"
+        aria-label="Slide 3"
+        data-carousel-slide-to="2"></button>
+      <button
+        type="button"
+        class="w-3 h-3 rounded-full"
+        aria-current="false"
+        aria-label="Slide 4"
+        data-carousel-slide-to="3"></button>
+    </div>
+    <!-- Slider controls -->
+    <button
+      type="button"
+      class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+      data-carousel-prev
+    >
+      <span
+        class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
+      >
+        <svg
+          class="w-4 h-4 text-white dark:text-gray-800"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 6 10"
+        >
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M5 1 1 5l4 4"></path>
+        </svg>
+        <span class="sr-only">Previous</span>
+      </span>
+    </button>
+    <button
+      type="button"
+      class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+      data-carousel-next
+    >
+      <span
+        class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
+      >
+        <svg
+          class="w-4 h-4 text-white dark:text-gray-800"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 6 10"
+        >
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="m1 9 4-4-4-4"></path>
+        </svg>
+        <span class="sr-only">Next</span>
+      </span>
+    </button>
+  </div>
+</div>
+<style>
+  .carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .carousel-slide {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+  }
+</style>
+<!-- <script src="../path/to/flowbite/dist/flowbite.min.js"></script> -->
+<script src="../../../node_modules/flowbite/dist/flowbite.min.js"></script>
