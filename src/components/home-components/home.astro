@@ -4,13 +4,9 @@ import avatar from "../../assets/avatar.png";
 ---
 
 <div
-  class="relative flex flex-col justify-center items-center overflow-hidden h-screen bg-gray-900 py-8 md:py-24 lg:py-72 lg:pt-40 animate-fade-in"
+  class="relative bg-gradient-blue flex flex-col justify-center items-center overflow-hidden h-screen bg-gray-900 py-8 md:py-24 lg:py-72 lg:pt-40 animate-fade-in"
 >
-  <img
-    src={img.src}
-    alt=""
-    class="absolute inset-0 -z-10 h-full w-full object-cover object-right md:object-center"
-  />
+
 
   <!-- Gradient Overlay on Small Screens -->
   <div
@@ -103,5 +99,8 @@ import avatar from "../../assets/avatar.png";
   .animate-fade-in {
     animation: fade-in 1s ease-in-out forwards;
     opacity: 0; /* Initial opacity set to 0 */
+  }
+  .bg-gradient-blue{
+    background: linear-gradient(to right, #5036bc, #0083ff);
   }
 </style>
