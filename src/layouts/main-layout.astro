@@ -23,7 +23,7 @@ const { title } = Astro.props;
   </head>
   <body>
     <main>
-      <Navbar client:load />
+      <Navbar client:visible />
       <slot>Default Text</slot>
     </main>
   </body>

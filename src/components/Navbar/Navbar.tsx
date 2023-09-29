@@ -1,4 +1,5 @@
 import { Fragment, useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { Dialog, Disclosure, Popover, Transition } from "@headlessui/react";
 import "./index.css";
 
@@ -84,13 +85,13 @@ function Navbar() {
             <a href="/">Home</a>
           </h1>
           <h1 className="text-md font-bold">
-            <a href="about">About Me</a>
+            <a href="/about">About Me</a>
           </h1>
           <h1 className="text-md font-bold">
-            <a href="projects">My Projects</a>
+            <a href="/projects">My Projects</a>
           </h1>
           <h1 className="text-md font-bold">
-            <a href="contact">Contact</a>
+            <a href="/contact">Contact</a>
           </h1>
         </>
       )}
@@ -129,13 +130,13 @@ function Navbar() {
             <motion.a variants={itemMotion} href="/">
               Home
             </motion.a>
-            <motion.a variants={itemMotion} href="about">
+            <motion.a variants={itemMotion} href="/about">
               About Me
             </motion.a>
-            <motion.a variants={itemMotion} href="projects">
+            <motion.a variants={itemMotion} href="/projects">
               My Projects
             </motion.a>
-            <motion.a variants={itemMotion} href="contact">
+            <motion.a variants={itemMotion} href="/contact">
               Contact
             </motion.a>
           </div>
