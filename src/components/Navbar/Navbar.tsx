@@ -32,8 +32,6 @@ const itemMotion = {
 function Navbar() {
   const matches = useMediaQuery("(min-width: 720px)");
   const [toggled, setToggled] = useState(false);
-
-  // Handle smooth scrolling for anchor links
   useEffect(() => {
     const handleAnchorClick = (e) => {
       e.preventDefault();

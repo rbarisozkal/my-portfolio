@@ -8,8 +8,6 @@ function Form() {
   const [isToastVisible, setToastVisible] = useState(false);
   const showToast = () => {
     setToastVisible(true);
-
-    // Hide the toast after 3 seconds (adjust the duration as needed)
     setTimeout(() => {
       setToastVisible(false);
     }, 4000);

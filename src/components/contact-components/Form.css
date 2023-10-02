@@ -1,4 +1,4 @@
-/* Toast Fade-in Animation */
+
 @keyframes toastFadeIn {
     from {
       opacity: 0;
@@ -9,8 +9,6 @@
       transform: translateY(0);
     }
   }
-  
-  /* Toast Fade-out Animation */
   @keyframes toastFadeOut {
     from {
       opacity: 1;
@@ -21,8 +19,7 @@
       transform: translateY(-10px);
     }
   }
-  
-  /* Apply animation to the toast element */
+
   .toast-enter {
     animation: toastFadeIn 0.3s ease-in-out forwards;
   }
