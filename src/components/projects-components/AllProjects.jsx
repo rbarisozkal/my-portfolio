@@ -107,18 +107,15 @@ function AllProjects() {
   };
 
   useEffect(() => {
-    // console.log(`${process.env.REACT_APP_API_KEY}`);
     async function getProjects() {
       await axios
         .get(
           "https://api.github.com/users/rbarisozkal/repos?username=rbarisozkal"
         )
         .then((response) => {
-          //sort data by date
           response.data.sort(function (a, b) {
             return new Date(b.created_at) - new Date(a.created_at);
           });
-          //push company projects to the top of the list
           response.data.unshift(...companyProjects);
           setProjects(response.data);
           console.log(response.data);
@@ -131,12 +128,12 @@ function AllProjects() {
       variants={projectsMotion}
       animate="visible"
       initial="hidden"
-      className="container flex flex-col mx-auto mt-8 flex flex-wrap justify-center items-center"
+      className="container flex flex-col mt-8 flex flex-wrap justify-center items-center"
     >
       {projects.map((repo) => (
         <motion.div
           variants={itemMotion}
-          className="bg-white rounded-lg shadow-lg overflow-hidden m-4 max-w-4xl w-full min-[320px]:p-4"
+          className="bg-white rounded-lg shadow-lg overflow-hidden m-4 max-w-4xl min-[320px]:p-4"
           key={repo.id}
         >
           {" "}
