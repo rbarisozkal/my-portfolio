@@ -133,7 +133,7 @@ function AllProjects() {
       {projects.map((repo) => (
         <motion.div
           variants={itemMotion}
-          className="bg-white rounded-lg shadow-lg overflow-hidden m-4 max-w-4xl min-[320px]:p-4"
+          className="bg-white rounded-lg shadow-lg overflow-hidden project-card m-4 max-w-4xl min-[320px]:p-4"
           key={repo.id}
         >
           {" "}
@@ -192,6 +192,14 @@ function AllProjects() {
               </a>
             </div>
           </div>
+          <style>
+            {`
+          .project-card {
+            min-width: 320px; /* Set the desired width for the project cards */
+            width: 100%; /* Ensure the card takes full width of the container */
+          }
+        `}
+          </style>
         </motion.div>
       ))}
     </motion.div>
