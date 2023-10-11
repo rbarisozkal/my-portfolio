@@ -2,16 +2,23 @@
 import emailjs from '@emailjs/browser';
 import Form from './Form';
 import dwight from "../../assets/dwight.gif";
+import github from "../../assets/github.svg";
+import linkedin from "../../assets/linkedin.svg";
 ---
 
 
 <div class="contact-form mt-8 p-24 md:p-32 lg:px-48 min-[320px]:p-4">
     <h2 class="text-3xl font-bold mb-4 text-center">Contact Me</h2>
 
-<div class="flex justify-center animate-fade-in">
-    <img src={dwight.src} alt="" class="w-11/12 h-auto md:w-1/2 md:h-auto" />
-  </div>
+    <div class="flex justify-center animate-fade-in">
+        <img src={dwight.src} alt="" class="w-11/12 h-auto md:w-1/2 md:h-auto" />
+    </div>
+    <div class="flex justify-center animate-fade-in">
+        <a href="https://www.linkedin.com/in/barisozkall773/" target="_blank"><img src={linkedin.src} alt="" class="w-12 m-4"></a>
+       <a href="https://github.com/rbarisozkal" target="_blank"><img src={github.src} alt="" class="w-12 m-4"></a> 
+        
+    </div>
    <Form client:load/>
-  </div>
+</div>
   
   
